@@ -1,0 +1,1652 @@
+/* ========================================
+   RESET BÁSICO E CONFIGURAÇÕES GLOBAIS
+   ======================================== */
+/* ========================================
+   ESTRUTURA "STICKY FOOTER"
+   (Garante que o footer fique no final)
+   ======================================== */
+
+html {
+    height: 100%;
+    /* Garante que o HTML ocupe a altura toda */
+}
+
+body {
+    /* 1. Transforma o body em um container flex */
+    display: flex;
+    flex-direction: column;
+    /* Organiza os filhos em coluna */
+
+    /* 2. Garante que o body tenha PELO MENOS a altura da tela */
+    min-height: 100vh;
+
+    /* Se você tinha a cor de fundo no seletor 'body, html',
+       mantenha ela apenas aqui no 'body' 
+    */
+    background-color: #EBF0F3;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    /* Fontes baseadas na imagem: 'Lato' (sans-serif) para texto, 'Merriweather' (serif) para título */
+    font-family: 'Lato', sans-serif;
+    background-color: #EBF0F3;
+    /* Cor de fundo principal */
+}
+
+
+
+
+/* ========================================
+   2. BARRA DE NAVEGAÇÃO (Navbar)
+   ======================================== */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* Espaço entre os botões */
+    background-color: #3A5A64;
+    /* Mesma cor do header */
+    padding: 10px;
+    /* Sombra suave abaixo da barra de navegação */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 12px 30px;
+    border-radius: 25px;
+    /* Cantos arredondados */
+    background-color: #4B7480;
+    /* Tom ligeiramente mais claro que o fundo */
+    border: 2px solid #DDF0F7;
+    /* Borda clara */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: white;
+    color: #3A5A64;
+}
+
+/* Estilo do botão "ativo" (ex: Home na imagem) */
+.nav-button.active {
+    background-color: white;
+    color: #3A5A64;
+    border-color: #3A5A64;
+}
+
+/* ========================================
+   3. SEÇÃO PRINCIPAL (Welcome Section)
+   ======================================== */
+.welcome-section {
+    display: flex;
+    justify-content: space-around;
+    /* Coloca o texto de um lado, imagem do outro */
+    align-items: flex-start;
+    /* Alinha os itens no topo */
+    padding: 60px 40px;
+    gap: 40px;
+}
+
+.welcome-content {
+    flex: 1;
+    /* Ocupa metade do espaço */
+    max-width: 500px;
+    /* Limita a largura do texto */
+}
+
+.welcome-image {
+    flex: 1;
+    /* Ocupa a outra metade */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    /* Altura mínima para o placeholder */
+}
+
+/* [PLACEHOLDER] Estilo para o ícone do Atelier no conteúdo */
+.logo-box-placeholder {
+    width: 120px;
+    height: 120px;
+    background-color: #3A5A64;
+    /* Cor escura */
+    color: white;
+    font-weight: 700;
+    border-radius: 20px;
+    /* Cantos arredondados */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Título "Seja Bem-vindo" */
+.welcome-content h1 {
+    /* Fonte Serifada (similar à imagem) */
+    font-family: 'Merriweather', serif;
+    font-size: 3.5rem;
+    /* 56px */
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Parágrafo de texto */
+.welcome-content p {
+    font-size: 1.1rem;
+    /* 17.6px */
+    color: #444;
+    line-height: 1.6;
+    /* Espaçamento entre linhas */
+}
+
+/* [PLACEHOLDER] Estilo para a área da colagem de imagens */
+.image-collage-placeholder {
+    width: 90%;
+    height: 350px;
+    border: 2px dashed #3A5A64;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3A5A64;
+    text-align: center;
+}
+
+/* ========================================
+   4. FAIXA DE CONTEÚDO (Galeria e Blog)
+   ======================================== */
+.content-band {
+    /* Cor de fundo da faixa */
+    background-color: #8FA6AC;
+    padding: 50px 20px;
+    margin-top: 40px;
+}
+
+/* Título da Seção (Estilo "Galeria" e "Blog") */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    /* 40px */
+    color: white;
+}
+
+/* O container arredondado escuro do título */
+.section-title span {
+    background-color: #3A5A64;
+    /* Cor do header */
+    padding: 10px 50px;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   5. SEÇÃO GALERIA
+   ======================================== */
+.gallery-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+.gallery-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* Espaço entre colunas e divisores */
+}
+
+.gallery-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Espaço entre as duas fotos da coluna */
+    flex: 1;
+    /* Faz as colunas terem o mesmo tamanho */
+}
+
+.gallery-column img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    /* <-- Proporção (4 de largura por 3 de altura) */
+    object-fit: cover;
+    /* <-- Continua essencial */
+
+    border-radius: 10px;
+    border: 3px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Os pontos azuis entre as colunas */
+.gallery-divider {
+    display: flex;
+    flex-direction: column;
+    gap: 180px;
+    /* Espaço entre os dois pontos (ajuste conforme o tamanho da imagem) */
+}
+
+.gallery-divider .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #3A5A64;
+    border-radius: 50%;
+}
+
+
+/* ========================================
+   6. SEÇÃO BLOG
+   ======================================== */
+.blog-section {
+    max-width: 900px;
+    /* Um pouco mais estreito que a galeria */
+    margin: 0 auto;
+}
+
+.blog-grid {
+    display: grid;
+    /* Grid de 2 colunas, com espaço igual */
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Os placeholders cinzas para os posts */
+.blog-post-placeholder {
+    height: 140px;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    border: 2px solid white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Link "Ver mais" */
+.see-more-link {
+    display: block;
+    /* Para ocupar a linha toda e permitir alinhamento */
+    text-align: right;
+    margin-top: 15px;
+    color: #3A5A64;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-family: 'Merriweather', serif;
+}
+
+.see-more-link:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   7. SEÇÃO PRODUTOS
+   ======================================== */
+.products-section {
+    max-width: 900px;
+    /* Alinhado com a largura do blog */
+    margin: 60px auto;
+}
+
+.products-grid {
+    display: grid;
+    /* Grid de 3 colunas */
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.product-placeholder {
+    height: 160px;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    border: 2px solid white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   8. SEÇÃO SOBRE
+   ======================================== */
+.about-container, .about-title {
+    display: none;
+}
+
+/* Estilo da nova seção "Sobre" */
+.about-section {
+    /* 1. Espaçamento e Fundo */
+    /* '5rem' é (aprox 80px) de "respiro" em cima e embaixo */
+    padding: 5rem 20px; 
+    background-color: #FFFFFF; /* Fundo branco para contrastar */
+    text-align: center; /* Centraliza o título "Sobre Nós" */
+    
+    /* 2. Animação de Fade-in (da rolagem) */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    visibility: hidden;
+    
+    /* 3. Propriedades antigas (como max-width e margin) 
+       são removidas daqui, pois o container interno 
+       (.about-content-wrapper) agora controla isso. 
+    */
+}
+
+
+
+.about-title {
+    /* O título "Sobre" que fica "flutuando" */
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    /* 40px */
+    color: #3A5A64;
+    /* Cor escura do texto */
+    background-color: white;
+    padding: 10px 40px;
+    border-radius: 20px;
+
+    /* Mágica do posicionamento */
+    position: absolute;
+    top: -45px;
+    /* Puxa o título para cima, para fora do container */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Centraliza horizontalmente */
+    z-index: 2;
+
+    /* Sombra interna para o efeito "cortado" */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+        inset 0 -6px 8px -5px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+    padding: 60px 30px 30px 30px;
+    /* Padding maior no topo para o título */
+    text-align: center;
+    color: #3A5A64;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* ========================================
+   9. RODAPÉ (Contato)
+   ======================================== */
+.footer {
+    background-color: #2F4C55;
+    /* Cor de fundo escura */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    /* Para telas pequenas */
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    color: #2F4C55;
+    /* Cor do ícone (placeholder) */
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.social-icon img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.phone-number {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* ========================================
+   10. BOTÃO VOLTAR AO TOPO
+   ======================================== */
+.back-to-top {
+    position: fixed;
+    /* Fica fixo na tela */
+    bottom: 30px;
+    right: 30px;
+
+    background-color: #3B9DA7;
+    /* Cor teal do botão */
+    color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    font-size: 2.5rem;
+    /* Tamanho da seta */
+    line-height: 1;
+    /* Ajuste para centralizar a seta */
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 100;
+}
+
+.back-to-top:hover {
+    background-color: #31828a;
+    transform: translateY(-3px);
+    /* Efeito de "levantar" */
+}
+
+/* ========================================
+   11. ROLAGEM SUAVE
+   ======================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========================================
+   12. ESTILOS DOS CARDS DINÂMICOS
+   (Versão Corrigida e Melhorada)
+   ======================================== */
+
+/* --- Card de Produto --- */
+
+/* Garante que o card (que é um link <a>) se comporte como um bloco */
+.product-card {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    /* Cor de texto padrão */
+
+    /* Aparência do Card */
+    background-color: #FFF;
+    border-radius: 10px;
+    border: 1px solid #EBF0F3;
+    /* Borda sutil */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    /* Sombra suave */
+
+    overflow: hidden;
+    /* Importante para a imagem não vazar */
+    text-align: center;
+    /* Centraliza o texto */
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito de "levantar" ao passar o mouse */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo da Imagem do Produto */
+.product-card img {
+    width: 100%;
+    /* Ocupa toda a largura do card */
+
+    /* Força uma proporção de 4:3 (largura:altura) */
+    /* Isso garante que todas as imagens fiquem uniformes */
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+    /* Cobre o espaço sem distorcer */
+
+    /* Cor de fundo para o caso da imagem não carregar */
+    background-color: #f0f0f0;
+}
+
+/* Estilo do Nome do Produto */
+.product-card h3 {
+    font-family: 'Merriweather', serif;
+    color: #3A5A64;
+    font-size: 1.4rem;
+    margin: 15px 10px 10px;
+
+    /* Evita que nomes longos quebrem o layout */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Estilo do Preço */
+.product-card .price {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #3B9DA7;
+    /* Cor Teal */
+    margin: 0 0 15px 0;
+    /* Espaçamento inferior */
+}
+
+/* ========================================
+   15. ESTILOS DAS PÁGINAS DE BLOG
+   ======================================== */
+
+/* Página de listagem (blogs.html) */
+.all-blogs-page .section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #3A5A64;
+    margin-top: -30px;
+    margin-bottom: 40px;
+}
+
+/* Página de post único (tabela-blogs.html) */
+.single-post-page {
+    padding: 40px 20px;
+    background-color: #FFF;
+    /* Fundo branco para o artigo */
+}
+
+.single-post-container {
+    max-width: 800px;
+    /* Largura máxima para leitura */
+    margin: 0 auto;
+}
+
+.single-post-container #post-title {
+    font-family: 'Merriweather', serif;
+    font-size: 2.8rem;
+    color: #3A5A64;
+    border-bottom: 2px solid #EBF0F3;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.single-post-container #post-content {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* Estiliza parágrafos e outros elementos que podem vir do banco */
+.single-post-container #post-content p {
+    margin-bottom: 1.5em;
+}
+
+.single-post-container #post-content h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.8rem;
+    color: #3A5A64;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+/* ========================================
+   16. ESTILOS ATUALIZADOS DO BLOG CARD
+   ======================================== */
+
+/* Substitua o seletor ".blog-card" antigo por este.
+   Nós removemos o padding e ajustamos o flex.
+*/
+.blog-card {
+    background-color: #FFF;
+    border-radius: 10px;
+    border: 2px solid white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    padding: 0;
+    /* <-- IMPORTANTE: Remove o padding antigo */
+    overflow: hidden;
+    /* <-- IMPORTANTE: Para a imagem não vazar */
+
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* Garante o layout em coluna */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Adicione este NOVO seletor para a imagem 
+*/
+.blog-card-image {
+    width: 100%;
+    height: 150px;
+    /* Altura fixa para a imagem do blog */
+    object-fit: cover;
+    /* Garante que a imagem cubra a área */
+    background-color: #f0f0f0;
+    /* Cor de fundo caso a imagem falhe */
+}
+
+/* Adicione este NOVO seletor para o conteúdo 
+   (para recolocar o padding que removemos) 
+*/
+.blog-card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* Faz o conteúdo ocupar o espaço restante */
+}
+
+/* Atualize seus seletores de h3, p, e .read-more
+   para incluir .blog-card-content 
+*/
+
+.blog-card-content h3 {
+    font-family: 'Merriweather', serif;
+    color: #3A5A64;
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.blog-card-content p {
+    font-family: 'Lato', sans-serif;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    flex-grow: 1;
+    /* Faz o parágrafo crescer */
+    margin-bottom: 15px;
+}
+
+.blog-card-content .read-more {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    color: #3B9DA7;
+    text-decoration: none;
+    text-align: right;
+}
+
+.blog-card-content .read-more:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   17. ESTILOS DA PÁGINA DE POST (Moderno)
+   ======================================== */
+
+/* Deixa o fundo da página branco e adiciona mais espaço */
+.single-post-page {
+    background-color: #FFF;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* Cria o "card" principal do artigo com sombra e borda */
+.single-post-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #EBF0F3;
+    /* Borda sutil */
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    /* Sombra suave */
+    padding: 30px 40px;
+    /* Mais preenchimento */
+}
+
+/* Estilo do link "Voltar" */
+.post-navigation {
+    margin-bottom: 20px;
+}
+
+.back-to-blog-link {
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    color: #3B9DA7;
+    /* Cor Teal */
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.back-to-blog-link:hover {
+    color: #2F4C55;
+}
+
+/* Estilo do título (refinamento) */
+.single-post-container #post-title {
+    font-size: 2.5rem;
+    /* Um pouco menor para caber melhor */
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+/* NOVO: Estilo dos Meta-dados (Autor, Data) */
+.post-meta {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #EBF0F3;
+    padding-bottom: 20px;
+}
+
+.post-meta span {
+    margin-right: 15px;
+}
+
+.post-meta strong {
+    color: #3A5A64;
+}
+
+/* NOVO: Estilo da Imagem do Post */
+.post-image-header {
+    width: 100%;
+    height: auto;
+    /* Altura automática */
+    max-height: 400px;
+    /* Altura máxima */
+    object-fit: cover;
+    /* Garante que a imagem cubra */
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+/* Estilo do conteúdo (refinamento) */
+.single-post-container #post-content {
+    font-size: 1.1rem;
+    /* Tamanho de leitura confortável */
+    line-height: 1.7;
+}
+
+.single-post-container #post-content p {
+    margin-bottom: 1.25em;
+}
+
+.single-post-container #post-content h2 {
+    font-size: 1.6rem;
+    margin-top: 1.5em;
+}
+
+/* NOVO: Estilo da Seção de Compartilhar */
+.post-share {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #EBF0F3;
+    text-align: right;
+    /* Alinha o botão à direita */
+}
+
+.share-button {
+    background-color: #3A5A64;
+    /* Cor escura do site */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 25px;
+    /* Arredondado como os botões do nav */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    /* Espaço entre o ícone e o texto */
+}
+
+.share-button:hover {
+    background-color: #2F4C55;
+    transform: translateY(-2px);
+}
+
+.share-button svg {
+    fill: white;
+}
+
+/* ========================================
+   18. ESTILOS DA PÁGINA DE PEDIDO (pedido.html)
+   ======================================== */
+
+/* Garante que o card de produto seja um link clicável */
+.product-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    /* Herda a cor do texto, se houver */
+}
+
+/* --- Layout da Página de Detalhes --- */
+.product-detail-page {
+    background-color: #FFF;
+    /* Fundo branco */
+    padding: 40px 20px;
+}
+
+.product-detail-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Em telas pequenas, quebra a linha */
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 40px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+}
+
+.product-image-column,
+.product-info-column {
+    flex: 1;
+    /* Faz as duas colunas terem o mesmo tamanho */
+    min-width: 300px;
+    /* Largura mínima antes de quebrar */
+}
+
+.product-image-column img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 1px solid #EBF0F3;
+}
+
+/* --- Coluna de Informações --- */
+.product-info-column h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    color: #3A5A64;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.product-meta {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.product-meta .price {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #3B9DA7;
+    /* Cor Teal */
+}
+
+.product-meta .stock {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    color: #777;
+    background-color: #EBF0F3;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.product-info-column p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    border-top: 1px solid #EBF0F3;
+    padding-top: 20px;
+}
+
+/* --- Formulário de Personalização --- */
+.customization-form {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #EBF0F3;
+}
+
+.customization-form label {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    color: #3A5A64;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.custom-select {
+    width: 100%;
+    padding: 12px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+}
+
+/* --- Botão de Pedido --- */
+.order-button {
+    background-color: #25D366;
+    /* Cor do WhatsApp */
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.order-button:hover {
+    background-color: #1DAE54;
+    transform: translateY(-2px);
+}
+
+/* Estilos para a página de produtos (produtos.css) */
+
+/* Container principal da página de produtos */
+.products-page-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding-bottom: 3rem;
+}
+
+/* Barra de filtros */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os filtros quebrem a linha em telas menores */
+    justify-content: space-between;
+    gap: 1rem; /* Espaçamento entre os filtros */
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.filter-bar input[type="search"],
+.filter-bar select {
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Faz o search bar ocupar mais espaço */
+.filter-bar input[type="search"] {
+    flex-grow: 2; /* Permite que ele cresça mais que os selects */
+    min-width: 250px; /* Largura mínima */
+}
+
+/* Faz os selects ocuparem um espaço definido */
+.filter-bar select {
+    flex-grow: 1;
+    min-width: 200px; /* Largura mínima */
+    cursor: pointer;
+}
+
+/* Estilo para o grid de produtos (pode reusar o .products-grid do seu index.css) */
+/* Se o seu .products-grid não for em grid, use este: */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Card de produto (Exemplo - ajuste conforme o seu) */
+.product-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    background: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px; /* Altura fixa para a imagem */
+    object-fit: cover; /* Garante que a imagem cubra o espaço */
+    background-color: #f0f0f0; /* Cor de fundo caso a imagem falhe */
+}
+
+.product-card h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.25rem;
+    margin: 1rem;
+    color: #333;
+}
+
+.product-card .product-price {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #004d40; /* Um tom de verde escuro */
+    margin: 0 1rem 0.5rem 1rem;
+}
+
+.product-card .product-category {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0 1rem 1rem 1rem;
+    text-transform: capitalize;
+}
+
+/* Mensagem de filtro vazio */
+.empty-filter {
+    font-size: 1.2rem;
+    color: #555;
+    grid-column: 1 / -1; /* Ocupa todas as colunas do grid */
+    text-align: center;
+    padding: 3rem;
+}
+
+/* ===================================================
+   ESTILOS DO NOVO HEADER E NAV
+   =================================================== */
+
+/* Remove estilos antigos do header e nav */
+header.top-header, nav.navbar {
+    display: none; /* Esconde os elementos antigos */
+}
+
+/* Novo Header Principal */
+.main-header {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    padding: 1rem 0; /* Aumenta o padding vertical */
+    position: sticky; /* Fixa no topo */
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    width: 90%;
+    max-width: 1200px; /* Limita a largura */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo e Nome da Marca */
+.header-logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.header-logo {
+    height: 50px; /* Tamanho do logo */
+    width: auto;
+    margin-right: 15px;
+}
+
+.header-brand-name {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem; /* Tamanho do nome */
+    font-weight: 700;
+    color: #333;
+}
+
+/* Nova Navegação */
+.main-nav {
+    display: flex;
+    gap: 15px; /* Espaço entre os links */
+}
+
+/* Botões da Nova Navegação */
+.main-nav .nav-button {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #555;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-nav .nav-button:hover {
+    background-color: #f4f4f4;
+    color: #000;
+}
+
+/* Estilo do link ativo (para a página galeria.html) */
+.main-nav .nav-button.active {
+    background-color: #ece7e2; /* Cor de destaque sutil */
+    color: #333;
+    font-weight: 700;
+}
+
+/* ===================================================
+   NOVA SEÇÃO "CALL TO ACTION" DA GALERIA
+   =================================================== */
+
+.gallery-cta-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #fafafa; /* Fundo levemente diferente */
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.gallery-cta-section .section-title {
+    margin-bottom: 1.5rem;
+}
+
+.gallery-cta-section p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.6;
+}
+
+.cta-button {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #8B4513; /* Cor de exemplo (marrom) */
+    padding: 15px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    background-color: #65340f; /* Cor mais escura no hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================================
+   19. ESTILOS DO CARROSSEL DA HOME
+   ======================================== */
+
+/* O container principal do carrossel */
+.carousel-container {
+    flex: 1; /* Ocupa o espaço ao lado do texto "Seja Bem-vindo" */
+    min-width: 50%; /* Garante que ele ocupe pelo menos metade */
+    position: relative; /* Base para os botões e texto */
+    height: 450px; /* Altura fixa do carrossel, ajuste se precisar */
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Garante que as imagens não vazem */
+}
+
+/* O slide individual */
+.carousel-slide {
+    display: none; /* Começa escondido - JS vai mostrar */
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cobre todo o espaço do slide sem distorcer */
+}
+
+/* O texto flutuante no meio */
+.carousel-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    background-color: rgba(58, 90, 100, 0.7); /* Fundo escuro semi-transparente */
+    padding: 20px;
+    text-align: center;
+}
+
+.carousel-text h2 {
+    font-family: 'Merriweather', serif;
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Botões de Próximo e Anterior */
+.carousel-prev,
+.carousel-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none; /* Impede seleção de texto */
+    background-color: rgba(58, 90, 100, 0.4);
+}
+
+.carousel-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background-color: rgba(58, 90, 100, 0.8);
+}
+
+/* Pontos de navegação (bolinhas) */
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: none; /* Escondido por enquanto - vamos focar no texto */
+}
+.carousel-dots .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+.carousel-dots .dot.active,
+.carousel-dots .dot:hover {
+    background-color: #3A5A64;
+}
+
+/* Animação de Fade (transição suave) */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: 0.4 }
+    to { opacity: 1 }
+}
+
+/* Ajuste no layout da seção de boas-vindas */
+.welcome-section {
+    align-items: stretch; /* Garante que o texto e o carrossel tenham a mesma altura */
+}
+.welcome-content {
+    /* Ajusta o texto para centralizar verticalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 30px; /* Adiciona um espaço */
+}
+
+/* Remove a div de placeholder que não usamos mais */
+.image-collage-placeholder {
+    display: none;
+}
+
+/* ========================================
+   20. FUNDO EM GRADIENTE ANIMADO
+   ======================================== */
+
+/* Remove a cor de fundo estática do 'body' e 'html' */
+body, html {
+    background-color: transparent;
+}
+
+/* Aplica o gradiente animado ao <body> */
+body {
+    /* Gradiente sutil usando a paleta do site */
+    background: linear-gradient(-45deg, #EBF0F3, #F5F7F9, #EBF0F3, #FDFEFF);
+    background-size: 400% 400%; /* Tamanho do gradiente */
+    animation: gradient-flow 15s ease infinite; /* Duração da animação */
+}
+
+/* A animação que "mexe" o fundo */
+@keyframes gradient-flow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ========================================
+   21. BOTÕES "VER MAIS"
+   ======================================== */
+
+.see-more-link {
+    display: inline-block; /* Transforma o link em "bloco" */
+    text-decoration: none;
+    text-align: center;
+    
+    background-color: #3A5A64; /* Cor escura do site */
+    color: white;
+    
+    padding: 12px 30px; /* Tamanho do botão */
+    margin-top: 20px; /* Espaço acima */
+    
+    border-radius: 25px; /* Bordas arredondadas (como o nav) */
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    
+    border: 2px solid #3A5A64;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+/* Efeito hover (ao passar o mouse) */
+.see-more-link:hover {
+    background-color: transparent; /* Fica transparente */
+    color: #3A5A64; /* Texto na cor escura */
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   22. NOVA SEÇÃO "SOBRE"
+   ======================================== */
+
+/* Remove o estilo antigo que não vamos usar */
+.about-container, .about-title {
+    display: none;
+}
+
+/* Estilo da nova seção */
+.about-section {
+    padding: 60px 20px;
+    background-color: #FFFFFF; /* Fundo branco para contrastar */
+    /* Coloca o título "Sobre" dentro desta seção */
+    text-align: center;
+}
+
+.about-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 40px auto 0; /* Espaço abaixo do título */
+    text-align: left;
+    flex-wrap: wrap; /* Quebra a linha em telas menores */
+}
+
+.about-image-column,
+.about-text-column {
+    flex: 1; /* Faz as colunas terem o mesmo tamanho */
+    min-width: 300px; /* Largura mínima */
+}
+
+.about-image-column img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-text-column h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    color: #3A5A64;
+    margin-top: 0;
+}
+
+.about-text-column p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* ========================================
+   23. ANIMAÇÃO DE ROLAGEM (Fade-in Suave)
+   ======================================== */
+
+/* Define o estado inicial dos elementos:
+  Invisíveis e levemente "para baixo" 
+*/
+.gallery-cta-section,
+.blog-section,
+.products-section,
+.about-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    visibility: hidden; /* Garante que está escondido */
+}
+
+/* Classe que o JavaScript vai adicionar:
+  Visível e na posição original 
+*/
+.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+/* ========================================
+   24. REFINAMENTOS DE ELEGÂNCIA
+   ======================================== */
+
+/* --- 1. Estilos do Novo "Hero" Carrossel --- */
+
+/* Remove os estilos antigos do welcome-section */
+.welcome-section, .welcome-content {
+    display: none; /* Não precisamos mais deles */
+}
+
+/* Container principal do Hero */
+.hero-carousel-container {
+    width: 100%;
+    /* 80% da altura da tela, menos a altura do header */
+    height: calc(80vh - 80px); 
+    position: relative;
+    overflow: hidden;
+}
+
+/* O container do carrossel agora é o próprio hero */
+.hero-carousel-container .carousel-container {
+    height: 100%;
+    width: 100%;
+    box-shadow: none; /* Remove sombras antigas */
+    border-radius: 0;
+}
+
+.hero-carousel-container .carousel-slide {
+    height: 100%;
+}
+
+/* Filtro escuro na imagem para o texto se destacar */
+.hero-carousel-container .carousel-slide img {
+    filter: brightness(0.6);
+}
+
+/* Ajusta o texto do carrossel para ser o Hero */
+.hero-carousel-container .carousel-text {
+    /* Centraliza totalmente */
+    top: 50%;
+    bottom: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    background: none; /* Remove o fundo antigo */
+    width: 90%;
+    max-width: 800px;
+}
+
+.hero-carousel-container .carousel-text h1 {
+    font-family: 'Merriweather', serif;
+    color: white;
+    font-size: 3.5rem; /* Título principal grande */
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-carousel-container .carousel-text p {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-size: 1.3rem;
+    margin: 1rem 0 2rem 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Botão de CTA (Call to Action) no Hero */
+.cta-button-hero {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #3A5A64; /* Texto escuro */
+    background-color: #FFFFFF; /* Fundo branco */
+    padding: 14px 28px;
+    border-radius: 25px;
+    border: 2px solid white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-button-hero:hover {
+    background-color: transparent;
+    color: white;
+}
+
+/* Ajusta os botões e pontos do carrossel */
+.hero-carousel-container .carousel-prev,
+.hero-carousel-container .carousel-next {
+    top: 50%; /* Já estava, mas garantindo */
+}
+.hero-carousel-container .carousel-dots {
+    bottom: 30px; /* Sobe um pouco os pontos */
+    display: block; /* Faz os pontos aparecerem */
+}
+
+
+/* --- 2. Estilos da Nova Seção "Depoimentos" --- */
+
+.testimonial-section {
+    padding: 5rem 20px;
+    background-color: #FDFEFF; /* Fundo branco/off-white */
+    text-align: center;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 40px auto 0;
+    text-align: left;
+}
+
+.testimonial-card {
+    background-color: #FFFFFF;
+    border: 1px solid #EBF0F3;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    /* Inicia escondido para a animação de scroll */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    visibility: hidden;
+}
+
+.testimonial-quote {
+    font-family: 'Merriweather', serif; /* Fonte elegante para a citação */
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #333;
+    line-height: 1.7;
+    margin-top: 0;
+    margin-bottom: 20px;
+    /* Adiciona aspas estilizadas */
+    position: relative;
+    padding-left: 30px;
+}
+.testimonial-quote::before {
+    content: '“';
+    position: absolute;
+    left: 0;
+    top: -10px;
+    font-size: 3rem;
+    color: #3B9DA7; /* Cor Teal */
+    font-family: 'Merriweather', serif;
+}
+
+.testimonial-author {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    color: #3A5A64;
+    text-align: right;
+    display: block;
+}
+
+
+/* --- 3. Refinamento de Espaçamento e Tipografia --- */
+
+/* Padroniza o "respiro" de todas as seções */
+.gallery-cta-section,
+.blog-section,
+.products-section,
+.about-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/* Estilo do novo subtítulo de introdução */
+.section-intro-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.15rem;
+    color: #555;
+    max-width: 600px;
+    margin: -20px auto 40px auto;
+    text-align: center;
+    line-height: 1.7;
+}
+
+/* Garante que a animação de scroll pegue os depoimentos */
+.testimonial-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}

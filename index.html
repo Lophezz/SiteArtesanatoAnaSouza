@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Lato:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/logo0.png" />
+    <title>Artelier Ana Souza</title>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="header-content">
+            <a href="#home" class="header-logo-link">
+                <img src="assets/images/logo0.png" alt="Logo Ateliê Ana Souza" class="header-logo">
+                <span class="header-brand-name">Ateliê Ana Souza</span>
+            </a>
+            <nav class="main-nav">
+                <a href="#home" class="nav-button">Home</a>
+                <a href="galeria.html" class="nav-button">Galeria</a> <a href="#blog" class="nav-button">Blog</a>
+                <a href="#produtos" class="nav-button">Produtos</a>
+                <a href="#sobre" class="nav-button">Sobre</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="hero-carousel-container" id="home">
+
+        <div class="carousel-slide fade">
+            <img src="assets/images/medium-shot-women-repair-sale-shop.jpg" alt="Foto carrossel 1">
+            <div class="carousel-text">
+                <h1>Ateliê Ana Souza</h1>
+                <p>Transformando ideias em peças únicas, feitas com carinho para você.</p>
+                <a href="#produtos" class="cta-button-hero">Conheça os Produtos</a>
+            </div>
+        </div>
+
+        <div class="carousel-slide fade">
+            <img src="assets/images/close-up-hand-drawing-leaf.jpg" alt="Foto carrossel 2">
+            <div class="carousel-text">
+                <h1>Criatividade em Cada Detalhe</h1>
+                <p>Unindo técnicas tradicionais ao toque moderno da arte.</p>
+                <a href="#produtos" class="cta-button-hero">Conheça os Produtos</a>
+            </div>
+        </div>
+
+        <div class="carousel-slide fade">
+            <img src="assets/images/female-painter-using-watercolor-paint-mixing-colors-artistic-creation.jpg"
+                alt="Foto carrossel 3">
+            <div class="carousel-text">
+                <h1>Sua Ideia, Nossa Arte</h1>
+                <p>Peças exclusivas que contam a sua história.</p>
+                <a href="#produtos" class="cta-button-hero">Conheça os Produtos</a>
+            </div>
+        </div>
+
+        <a class="carousel-prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="carousel-next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="carousel-dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </main>
+
+    <div class="content-band">
+
+        <section class="gallery-cta-section" id="galeria">
+            <h2 class="section-title"><span>Nossos Trabalhos</span></h2>
+            <p>Conheça algumas das peças únicas que criamos com carinho em nosso ateliê.</p>
+            <a href="galeria.html" class="cta-button">Ver Nossa Galeria</a>
+        </section>
+
+        <section class="blog-section" id="blog">
+            <h2 class="section-title"><span>Blog</span></h2>
+            <p class="section-intro-text">Dicas, novidades e um pouco dos bastidores do nosso ateliê.</p>
+            <div class="blog-grid" id="blog-grid-container">
+            </div>
+            <a href="blogs.html" class="see-more-link">Ver mais</a>
+        </section>
+
+        <section class="products-section" id="produtos">
+            <h2 class="section-title"><span>Produtos</span></h2>
+            <p class="section-intro-text">Uma seleção especial de produtos feitos à mão e prontos para você.</p>
+            <div class="products-grid" id="products-grid-container">
+            </div>
+            <a href="produtos.html" class="see-more-link">Ver mais</a>
+        </section>
+
+        <section class="testimonial-section">
+            <h2 class="section-title"><span>O que nossos clientes dizem</span></h2>
+            <div class="testimonial-grid">
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"A bolsa é simplesmente perfeita! O acabamento é impecável e dá para
+                        ver que foi feita com muito carinho. Com certeza comprarei de novo!"</p>
+                    <span class="testimonial-author">- Maria S.</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Atendimento maravilhoso e o produto é ainda mais bonito pessoalmente.
+                        Virou minha loja favorita de acessórios artesanais."</p>
+                    <span class="testimonial-author">- Joana L.</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Comprei para presentear minha mãe e ela amou. A qualidade do material
+                        é excelente. Recomendo de olhos fechados."</p>
+                    <span class="testimonial-author">- Carlos P.</span>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="about-section" id="sobre">
+            <h2 class="section-title"><span>Sobre Nós</span></h2>
+
+            <div class="about-content-wrapper">
+                <div class="about-image-column">
+                    <img src="assets/images/pexels-michael-burrows-7148007.jpg" alt="Foto do Atelier Ana Souza">
+                </div>
+
+                <div class="about-text-column">
+                    <h3>Nossa História</h3>
+                    <p>
+                        Nosso ateliê nasceu da paixão pelo artesanato e pela
+                        vontade de criar peças que expressem beleza e
+                        identidade. Valorizamos cada detalhe do processo,
+                        unindo técnicas tradicionais ao toque moderno.
+                    </p>
+                    <p>
+                        Assim, transformamos tecidos e materiais em criações únicas,
+                        feitas com carinho para contar a sua história. Cada item é
+                        mais que um acessório; é um pedaço da nossa arte.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <footer class="footer">
+        <p>Entre em contato conosco através de nossas redes sociais ou pelo número abaixo:</p>
+        <div class="social-links">
+
+            <a href="https://www.facebook.com/ATELIERCAMILAGONCALVES" target="_blank" class="social-icon"
+                aria-label="Facebook">
+                <img src="assets/images/Facebook Circled.png" alt="Facebook">
+            </a>
+
+            <a href="https://www.instagram.com/lophezzz/" target="_blank" class="social-icon" aria-label="Instagram">
+                <img src="assets/images/Instagram Circle.png" alt="Instagram">
+            </a>
+
+            <span class="phone-number">55 11 96649-7848</span>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Voltar ao topo">
+        &uarr;
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

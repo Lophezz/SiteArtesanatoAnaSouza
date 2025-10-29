@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Lato:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/logo0.png" />
+    <title>Carregando Produto... - Atelier Ana Souza</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-content">
+
+            <a href="index.html" class="header-logo-link">
+                <img src="assets/images/logo0.png" alt="Logo Ateliê Ana Souza" class="header-logo">
+                <span class="header-brand-name">Ateliê Ana Souza</span>
+            </a>
+
+            <nav class="main-nav">
+                <a href="index.html#home" class="nav-button">Home</a>
+                <a href="galeria.html" class="nav-button">Galeria</a>
+                <a href="index.html#blog" class="nav-button">Blog</a>
+                <a href="index.html#produtos" class="nav-button">Produtos</a>
+                <a href="index.html#sobre" class="nav-button">Sobre</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html#home" class="nav-button">Home</a>
+        <a href="index.html#galeria" class="nav-button">Galeria</a>
+        <a href="blogs.html" class="nav-button">Blog</a>
+        <a href="index.html#produtos" class="nav-button">Produtos</a>
+        <a href="index.html#sobre" class="nav-button">Sobre</a>
+    </nav>
+
+    <main class="product-detail-page">
+        <div class="product-detail-container">
+
+            <div class="product-image-column">
+                <img id="product-image" src="https://via.placeholder.com/500x500?text=Carregando..."
+                    alt="Imagem do Produto">
+            </div>
+
+            <div class="product-info-column">
+                <h1 id="product-title">Carregando...</h1>
+
+                <div class="product-meta">
+                    <span id="product-price" class="price">R$ ...</span>
+                    <span id="product-stock" class="stock">... em estoque</span>
+                </div>
+
+                <p id="product-description">...</p>
+
+                <div class="customization-form">
+                    <label for="select-color">Escolha a cor:</label>
+                    <select id="select-color" class="custom-select">
+                        <option>Carregando opções...</option>
+                    </select>
+
+                    <label for="select-material">Escolha o material:</label>
+                    <select id="select-material" class="custom-select">
+                        <option>Carregando opções...</option>
+                    </select>
+                </div>
+
+                <button id="order-button" class="order-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="20px"
+                        fill="#FFFFFF">
+                        <path d="M0 0h24v24H0V0z" fill="none" />
+                        <path d="M.01 20.99L23.99 12 .01 3.01 0 10l17.01 2L0 14l.01 6.99z" />
+                    </svg>
+                    Pedir pelo WhatsApp
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Entre em contato conosco através de nossas redes sociais ou pelo número abaixo:</p>
+        <div class="social-links">
+
+            <a href="https://www.facebook.com/ATELIERCAMILAGONCALVES" target="_blank" class="social-icon"
+                aria-label="Facebook">
+                <img src="assets/images/Facebook Circled.png" alt="Facebook">
+            </a>
+
+            <a href="https://www.instagram.com/lophezzz/" target="_blank" class="social-icon" aria-label="Instagram">
+                <img src="assets/images/Instagram Circle.png" alt="Instagram">
+            </a>
+
+            <span class="phone-number">55 11 96649-7848</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/pedido.js"></script>
+</body>
+
+</html>

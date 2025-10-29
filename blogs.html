@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Lato:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/logo0.png" />
+    <title>Blog - Atelier Ana Souza</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-content">
+
+            <a href="index.html" class="header-logo-link">
+                <img src="assets/images/logo0.png" alt="Logo Ateliê Ana Souza" class="header-logo">
+                <span class="header-brand-name">Ateliê Ana Souza</span>
+            </a>
+
+            <nav class="main-nav">
+                <a href="index.html#home" class="nav-button">Home</a>
+                <a href="galeria.html" class="nav-button">Galeria</a>
+                <a href="index.html#blog" class="nav-button">Blog</a>
+                <a href="index.html#produtos" class="nav-button">Produtos</a>
+                <a href="index.html#sobre" class="nav-button">Sobre</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html#home" class="nav-button">Home</a>
+        <a href="index.html#galeria" class="nav-button">Galeria</a>
+
+        <a href="blogs.html" class="nav-button">Blog</a>
+
+        <a href="index.html#produtos" class="nav-button">Produtos</a>
+        <a href="index.html#sobre" class="nav-button">Sobre</a>
+    </nav>
+
+    <main class="all-blogs-page">
+        <section class="blog-section" id="blog">
+            <h2 class="section-title"><span>Blog</span></h2>
+            <p class="section-subtitle">Todos os nossos posts e novidades.</p>
+
+            <div class="blog-grid" id="all-blogs-grid-container">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Entre em contato conosco através de nossas redes sociais ou pelo número abaixo:</p>
+        <div class="social-links">
+
+            <a href="https://www.facebook.com/ATELIERCAMILAGONCALVES" target="_blank" class="social-icon"
+                aria-label="Facebook">
+                <img src="assets/images/Facebook Circled.png" alt="Facebook">
+            </a>
+
+            <a href="https://www.instagram.com/lophezzz/" target="_blank" class="social-icon" aria-label="Instagram">
+                <img src="assets/images/Instagram Circle.png" alt="Instagram">
+            </a>
+
+            <span class="phone-number">55 11 96649-7848</span>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Voltar ao topo">
+        &uarr;
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/blogs.js"></script>
+</body>
+
+</html>

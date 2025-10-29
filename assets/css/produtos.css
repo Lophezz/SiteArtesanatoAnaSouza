@@ -1,0 +1,59 @@
+/* ===================================================
+   ARQUIVO: assets/css/produtos.css
+   Estilos da página de listagem de produtos
+   =================================================== */
+
+/* Container principal da página */
+.products-page-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Título (reutiliza o estilo global, mas centraliza) */
+.products-page-container .section-title {
+    text-align: center;
+    margin-top: 0;
+}
+
+/* --- Barra de Filtros --- */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap; /* Quebra em telas menores */
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #EBF0F3;
+}
+
+/* Estilo dos inputs e selects */
+.filter-bar input[type="search"],
+.filter-bar select {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px; /* Arredondado */
+    background-color: #FFF;
+    flex: 1; /* Ocupa espaço disponível */
+    min-width: 180px; /* Largura mínima */
+}
+
+.filter-bar input[type="search"] {
+    flex: 2; /* Ocupa mais espaço */
+    min-width: 250px;
+}
+
+/* Mensagem de "Não encontrado" */
+.no-products-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #777;
+    padding: 50px;
+}

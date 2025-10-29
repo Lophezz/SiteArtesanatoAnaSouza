@@ -1,0 +1,49 @@
+/* ===================================================
+   ESTILOS DA PÁGINA DE GALERIA (galeria.html)
+   =================================================== */
+
+body {
+    background-color: #fdfdfd;
+}
+
+/* Garante que o header fixo não cubra o conteúdo */
+.gallery-page-container {
+    padding-top: 4rem; /* Ajuste se o header tiver altura diferente */
+    padding-bottom: 4rem;
+    width: 90%;
+    max-width: 1400px; /* Mais largo para a galeria */
+    margin: 0 auto;
+}
+
+.gallery-page-container .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Grid de fotos responsivo */
+.photo-grid {
+    display: grid;
+    /* Cria colunas automáticas de no mínimo 300px */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem; /* Espaço entre as fotos */
+}
+
+.photo-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    display: block;
+    background-color: #f0f0f0; /* Cor de fundo para placeholders */
+}
+
+.photo-item:hover {
+    transform: scale(1.03); /* Efeito de zoom sutil */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
