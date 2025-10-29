@@ -1447,7 +1447,6 @@ body {
   Invisíveis e levemente "para baixo" 
 */
 .gallery-cta-section,
-.blog-section,
 .products-section,
 .about-section {
     opacity: 0;
@@ -1626,7 +1625,6 @@ body {
 
 /* Padroniza o "respiro" de todas as seções */
 .gallery-cta-section,
-.blog-section,
 .products-section,
 .about-section {
     padding-top: 5rem;
