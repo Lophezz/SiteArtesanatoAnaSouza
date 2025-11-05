@@ -20,7 +20,26 @@ O frontend utiliza a biblioteca `axios` para fazer requisições HTTP à API, to
 
 ### 🖼️ Telas do Site
 
-Aqui é um ótimo lugar para adicionar *prints* do site!
+### 🖼️ Telas do Site
+
+<details>
+  <summary>Clique para expandir e ver as telas do site</summary>
+  
+  **Tela Principal (Home)**
+  <br>
+  <img width="650" alt="Tela principal do site" src="https://github.com/user-attachments/assets/39d8c78b-5b69-429c-8a66-c900bb89cd18" />
+  <br><br>
+  
+  **Página de Produtos (com filtros)**
+  <br>
+  <img width="650" alt="Tela da página de produtos" src="https://github.com/user-attachments/assets/bccedd6d-a64f-4d12-bcd3-7bbc18011a63" />
+  <br><br>
+  
+  **Página de Detalhe do Produto (Pedido)**
+  <br>
+  <img width="650" alt="Tela de detalhe de um produto" src="https://github.com/user-attachments/assets/e0eadf38-6b41-4d80-8c68-2d7fc1856b99" />
+
+</details>
 
 ## ✨ Funcionalidades Principais
 
