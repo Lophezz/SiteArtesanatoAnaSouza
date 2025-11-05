@@ -20,8 +20,6 @@ O frontend utiliza a biblioteca `axios` para fazer requisições HTTP à API, to
 
 ### 🖼️ Telas do Site
 
-### 🖼️ Telas do Site
-
 <details>
   <summary>Clique para expandir e ver as telas do site</summary>
   
