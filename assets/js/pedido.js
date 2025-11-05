@@ -103,14 +103,26 @@ function configurarBotaoPedido(produto) {
         // Número de telefone
         const phoneNumber = '5511966497848';
 
+        // ======================================================
+        // INÍCIO DA MENSAGEM ATUALIZADA (MAIS HUMANA)
+        // ======================================================
+
         // Monta o texto da mensagem
-        let texto = `Olá! Tenho interesse no produto:\n\n`;
-        texto += `*Produto:* ${produto.nomeProduto} (ID: ${produto.id})\n`;
-        texto += `*Preço:* R$ ${Number(produto.preco).toFixed(2)}\n\n`;
-        texto += `*Minha Personalização:*\n`;
+        let texto = `Olá, Ateliê Ana Souza!\n\n`;
+        texto += `Vi um produto incrível no site de vocês e gostaria de fazer uma encomenda:\n\n`;
+        texto += `*Produto:* ${produto.nomeProduto}\n`;
+        texto += `*Preço:* R$ ${Number(produto.preco).toFixed(2)}\n`;
+        texto += `*(Ref. ID: ${produto.id})*\n\n`;
+        
+        texto += `*Minhas escolhas de personalização:*\n`;
         texto += `*Cor:* ${selectedColor}\n`;
         texto += `*Material:* ${selectedMaterial}\n\n`;
-        texto += `Gostaria de confirmar o pedido.`;
+        
+        texto += `Poderiam me confirmar como podemos finalizar o pedido? Muito obrigado(a)!`;
+
+        // ======================================================
+        // FIM DA MENSAGEM ATUALIZADA
+        // ======================================================
 
         // Codifica o texto para a URL
         const encodedText = encodeURIComponent(texto);

@@ -12,8 +12,65 @@
     <link rel="icon" type="image/png" href="assets/images/logo0.png" />
     <title>Carregando Produto... - Atelier Ana Souza</title>
   </head>
-
   <body>
+    <div class="accessibility-container">
+      <button
+        class="accessibility-toggle"
+        id="accessibility-toggle-btn"
+        aria-label="Abrir menu de acessibilidade"
+        aria-expanded="false"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="26px"
+          viewBox="0 0 24 24"
+          width="26px"
+          fill="#FFFFFF"
+        >
+          <path d="M0 0h24v24H0V0z" fill="none" />
+          <path
+            d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-5.41l-1.34-1.34L13 6.32V11h2v11h-2v-6h-2v6H9V11h2V6.32L9.75 7.58 8.41 9H3V7h5.41l1.34-1.34L11 4.32V4c0-1.1.9-2 2-2s2 .9 2 2v.32l1.25 1.25L17.59 7H21v2z"
+          />
+        </svg>
+      </button>
+
+      <div
+        class="accessibility-panel"
+        id="accessibility-panel"
+        role="dialog"
+        aria-hidden="true"
+      >
+        <h3 class="panel-title">Acessibilidade</h3>
+
+        <div class="access-feature">
+          <label for="font-percentage">Tamanho do texto</label>
+          <div class="font-controls">
+            <button id="font-decrease" aria-label="Diminuir texto">-</button>
+            <span id="font-percentage">100%</span>
+            <button id="font-increase" aria-label="Aumentar texto">+</button>
+          </div>
+        </div>
+
+        <div class="access-feature">
+          <label for="toggle-contrast">Alto contraste</label>
+          <button class="toggle-btn" id="toggle-contrast" data-active="false">
+            Desativado
+          </button>
+        </div>
+
+        <div class="access-feature">
+          <label for="toggle-grayscale">Escala de cinza</label>
+          <button class="toggle-btn" id="toggle-grayscale" data-active="false">
+            Desativado
+          </button>
+        </div>
+
+        <button class="restore-btn" id="restore-defaults">
+          Restaurar Padrões
+        </button>
+      </div>
+    </div>
+    
     <header class="main-header">
       <div class="header-content">
         <a href="index.html" class="header-logo-link">
@@ -137,5 +194,6 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="assets/js/api.js"></script>
     <script src="assets/js/pedido.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
